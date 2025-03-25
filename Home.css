@@ -10,14 +10,13 @@ body {
     background-color: rgb(255, 255, 255); /* Cor de fundo */
     color: rgb(255, 255, 255);
     font-size: 16px;
-    overflow: hidden;
+    overflow: hidden; /* Impede de rolar a imagem */
 }
 
 header {
-    color: #fffbfa;
     padding: 10px 0; /* Ajuste o padding para diminuir a altura do cabeçalho */
     width: 100%; /* Garante que o cabeçalho ocupe toda a largura da tela */
-    background-image: linear-gradient(to right, white,#95efff, #ccf7ff);  /* Gradiente da esquerda para a direita */
+    background-image: linear-gradient(to right, white, #ebfcff, #a5eaf7);  /* Gradiente da esquerda para a direita */
     margin: 0;
     position: fixed;
     left: 50%;
@@ -27,99 +26,108 @@ header {
     align-items: center; /* Alinha os itens verticalmente */
     z-index: 2;
     border-bottom: 5px solid #ffffff; /* Linha divisória branca */
-    height: 120px; /* Definindo uma altura fixa para o cabeçalho */
-}
-/* Ajuste o logo para ter 500px de largura */
-header img {
-    width: 600px; /* Logo com 500px de largura */
-    height: auto; /* Mantém a proporção do logo */
-}
+    height: 80px; /* Definindo uma altura fixa para o cabeçalho */
 
-header nav ul {
-    padding-top: 30px;
-    display: grid; /* Usando grid para o layout */
-    grid-template-columns: repeat(3, 300px); /* Organizando os itens em 3 colunas */
-    justify-content: center; /* Alinha os itens horizontalmente ao centro */
-    list-style: none;
-    gap: 20px; /* Espaçamento entre os itens */
-}
-
-header nav ul li {
-    text-align: center; /* Centraliza o conteúdo dentro do item */
-}
-
-header nav ul li a {
-    color: #07adb6;
-    font-size: 30px;
-    text-decoration: none;
-    transition: 0.3s;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-header nav ul li a:hover {
-    font-size: 0px;
-    transform: scale(1.1); /* Alteração para dar um efeito de crescimento */
-}
-
-/* Barra de carregamento */
-.progress-bar {
-    position: absolute;
-    bottom: -10px; /* Ajusta a barra logo abaixo do link */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza a barra */
-    height: 5px;
-    width: 0; /* Começa com a largura em 0 */
-    max-width: 50px;
-    background-color: #fff;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease, width 0.5s ease; /* Transições para a barra */
-}
-
-.progress-bar .progress {
-    height: 100%;
-    width: 0; /* Começa vazia */
-    background-color: #ff6347;
-    border-radius: 5px;
-}
-
-/* Exibe a barra de carregamento ao passar o mouse sobre o link */
-header nav ul li a:hover + .progress-bar {
-    opacity: 1;
-    visibility: visible;
-    width: 100%; /* Barra expande para 100% da largura do link */
-    animation: loading 3s ease-in-out forwards; /* Expande a barra do meio para as pontas */
-}
-
-/* Animação de carregamento */
-@keyframes loading {
-    0% {
-        width: 0;
+    /* Alinha o conteúdo de login (ícone e texto) */
+    & .login {
+        color: #07adb6;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-left: 175%;
+        padding: 0px;
+        background: transparent !important;
+        border: none;
+        position: relative;
     }
-    50% {
-        width: 100%; /* A barra atinge 100% da largura do link */
+
+    /* Estilos do ícone dentro de .login */
+    & .login i {
+        margin-left: 8px; /* Adiciona um pequeno espaço entre o ícone e o texto */
+        font-size: 40px; /* Tamanho do ícone */
     }
-    100% {
-        width: 100%; /* A largura permanece 100% */
+
+    /* Estilos do link dentro de .login */
+    & .login a {
+        color: #07adb6;
+        font-size: 20px;
+        text-decoration: none;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    & img {
+        width: 600px; /* Logo com 600px de largura */
+        height: auto; /* Mantém a proporção do logo */
+    }
+
+    & nav ul {
+        padding-top: 30px;
+        display: grid; /* Usando grid para o layout */
+        grid-template-columns: repeat(5, 200px); /* Organizando os itens em 5 colunas */
+        justify-content: center; /* Alinha os itens horizontalmente ao centro */
+        list-style: none;
+        position: relative;
+        top: -10px; /* Ajuste para mover para cima a lista de navegação */
+    }
+
+    & nav ul li {
+        text-align: center; /* Centraliza o conteúdo dentro do item */
+        
+        & a {
+            color: #07adb6;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+            cursor: pointer;
+            display: inline-block;
+            padding: 5px 10px; /* Adiciona padding ao redor do texto */
+            border-radius: 5px;
+
+            &:hover {
+                background-color: #def5f6;
+                color: #07adb6;
+            }
+        }
     }
 }
+
+
 
 section {
-    background-color: aqua;
+    background-color: #07adb6;
     height: 100vh;
-    position: relative;
-    display: flex; /* Ativa o Flexbox para organizar os elementos em linha ou coluna */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex;
+    align-items: center; /* Centraliza a imagem verticalmente */
+    justify-content: flex-start; /* A imagem começa do lado esquerdo da tela */
     width: 100%;
-    height: 100vh; /* 100% da altura da tela */
+
+    & div {
+        position: relative; /* Permite que o ícone seja posicionado em relação à imagem */
+
+        & img {
+            width: 800px;
+            position: relative;
+            border: 5px solid #ffffff;
+        }
+
+        & i {
+            position: absolute;
+            top: 55%; /* Centraliza verticalmente na imagem */
+            right: 20px; /* Coloca o ícone na ponta direita da imagem */
+            transform: translateY(-50%); /* Ajuste fino para centralizar exato */
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: #838383; /* Altera a cor no hover */
+            }
+        }
+    }
 }
 
-     & div img {
-        width: 300px;
-        position:relative;
-    
-     }
+
+/* Ajustar para diferentes tamanhos de tela */
 
