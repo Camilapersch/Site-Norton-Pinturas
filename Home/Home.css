@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255); /* Cor de fundo */
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    overflow: hidden; /* Impede de rolar a imagem */
+}
+
+header {
+    padding: 10px 0; /* Ajuste o padding para diminuir a altura do cabeçalho */
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura da tela */
+    background-image: linear-gradient(to right, white, #ebfcff, #a5eaf7);  /* Gradiente da esquerda para a direita */
+    margin: 0;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex; /* Usando flexbox para controlar o layout */
+    justify-content: flex-start; /* Alinha o conteúdo do cabeçalho à esquerda */
+    align-items: center; /* Alinha os itens verticalmente */
+    z-index: 2;
+    border-bottom: 5px solid #ffffff; /* Linha divisória branca */
+    height: 80px; /* Definindo uma altura fixa para o cabeçalho */
+
+    /* Alinha o conteúdo de login (ícone e texto) */
+    & .login {
+        color: #07adb6;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-left: 175%;
+        padding: 0px;
+        background: transparent !important;
+        border: none;
+        position: relative;
+    }
+
+    /* Estilos do ícone dentro de .login */
+    & .login i {
+        margin-left: 8px; /* Adiciona um pequeno espaço entre o ícone e o texto */
+        font-size: 40px; /* Tamanho do ícone */
+        cursor: default;
+    }
+
+    /* Estilos do link dentro de .login */
+    & .login a {
+        color: #07adb6;
+        font-size: 20px;
+        text-decoration: none;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    & img {
+        width: 600px; /* Logo com 600px de largura */
+        height: auto; /* Mantém a proporção do logo */
+    }
+
+    & nav ul {
+        padding-top: 30px;
+        display: grid; /* Usando grid para o layout */
+        grid-template-columns: repeat(5, 200px); /* Organizando os itens em 5 colunas */
+        justify-content: center; /* Alinha os itens horizontalmente ao centro */
+        list-style: none;
+        position: relative;
+        top: -10px; /* Ajuste para mover para cima a lista de navegação */
+    }
+
+    & nav ul li {
+        text-align: center; /* Centraliza o conteúdo dentro do item */
+        
+        & a {
+            color: #07adb6;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+            cursor: pointer;
+            display: inline-block;
+            padding: 5px 10px; /* Adiciona padding ao redor do texto */
+            border-radius: 5px;
+
+            &:hover {
+                background-color: #def5f6;
+                color: #07adb6;
+            }
+        }
+    }
+}
+
+
+
+section {
+    background-color: #07adb6;
+    height: 105vh;
+    display: flex;
+    align-items: center; /* Centraliza a imagem verticalmente */
+    width: 100%;
+
+    & h1 {
+        transform: translateX(30%);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 50px;
+        margin-bottom: 15%; /* Espaço entre o título e o texto */
+        white-space: nowrap; /* Garante que "Norton Pinturas" fique na mesma linha */
+    }
+
+    & h6 {
+        font-size: 20px;
+        display: flex;
+        transform: translateX(-43%);
+    }
+    & div {
+        position: relative; /* Permite que o ícone seja posicionado em relação à imagem */
+
+        & img {
+            width: 800px;
+            position: relative;
+            border: 5px solid #ffffff;
+        }
+
+        & i {
+            position: absolute;
+            top: 55%; /* Centraliza verticalmente na imagem */
+            right: 20px; /* Coloca o ícone na ponta direita da imagem */
+            transform: translateY(-50%); /* Ajuste fino para centralizar exato */
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: #838383; /* Altera a cor no hover */
+            }
+        }
+    }
+}
+ 
+
+/* Ajustar para diferentes tamanhos de tela */
