@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('../img/background.png');/* Adiciona as duas imagens */
+    background-size: cover, cover; /* Ambas as imagens vão cobrir a tela */
+    background-position: center center, center center; /* Posiciona ambas no centro */
+    background-repeat: no-repeat, no-repeat; /* Impede a repetição das imagens */
+    height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+}
+
+.container {
+    position: absolute;  /* Fixar a posição */
+    left: 0;  /* Garantir que fique na esquerda */
+    top: 0;   /* Começar do topo */
+    
+    width: 50vw;  /* Ocupa metade da largura da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Cor do texto */
+    z-index: 1;  /* Garantir que o conteúdo fique acima do fundo */
+    position: relative;
+    border-radius: 0px;
+}
+
+.container::before {
+    content: ''; /* Criar um elemento antes */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #07adb6;  /* Cor de fundo com opacidade */
+    z-index: -2;  /* Coloca a cor atrás da imagem */
+    opacity: 50%;
+    border-radius: 50px;
+}
+
+.container::after {
+    content: ''; /* Criar o pseudo-elemento para a imagem */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/blur.png'); /* Imagem de fundo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Opacidade da imagem de fundo */
+    z-index: -3;  /* Coloca a imagem atrás da cor de fundo */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 30px;
+    transform: translateY(-10%);
+}
+
+h1 {
+    text-align: center;
+    font: 50px;
+    color: white;
+    margin: 50px;
+}
+
+.input-box {
+    display: flex;
+    margin: 10px;
+    outline: none;
+    border-radius: 30px;
+    border-color: #adabab;
+    border: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    display: flex;
+    color: white;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    color: #ebfdff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 20px;
+    transform: translateY(-50%);
+    color: #ebfdff;
+}
+
+input:focus {
+    outline: none; /* Remove o contorno ao focar */
+}
+
+.input-box input::placeholder {
+    color: #ffffffc2;
+    font-size: 20px;
+}
+
+a {
+    margin: 0px 0px 0px 300px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #ebfdff;
+}
+
+.register {
+    font-size: 15px;
+    text-align: center;
+
+    & :
+}
+
+.checkbox {
+    font-size: 100px;
+}
+
+button {
+    margin-top: 50px;
+    font-size: 20px;
+    width: 200px;
+    height: 50px; /* Defini altura fixa para evitar cortes */
+    border-radius: 50px;
+    border: none;
+    background: #07adb6;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 0px 120px;
+}
+
+button:hover {
+    background: #05969f;
+}
