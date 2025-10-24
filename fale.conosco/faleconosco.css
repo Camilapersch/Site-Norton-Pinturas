@@ -93,57 +93,10 @@ header {
     }
 }
 
-
-
 section {
-    background-color: #07adb6;
-    height: 105vh;
-    display: flex;
-    align-items: center; /* Centraliza a imagem verticalmente */
-    width: 100%;
-
-    & h1 {
-        transform: translateX(30%);
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        font-size: 50px;
-        margin-bottom: 15%; /* Espaço entre o título e o texto */
-        white-space: nowrap; /* Garante que "Norton Pinturas" fique na mesma linha */
-    }
-
-    & h6 {
-        font-size: 20px;
-        display: flex;
-        transform: translateX(-43%);
-    }
-    & div {
-        position: relative; /* Permite que o ícone seja posicionado em relação à imagem */
-
-        & img {
-            width: 800px;
-            position: relative;
-            border: 5px solid #ffffff;
-        }
-
-        & i {
-            position: absolute;
-            top: 55%; /* Centraliza verticalmente na imagem */
-            right: 20px; /* Coloca o ícone na ponta direita da imagem */
-            transform: translateY(-50%); /* Ajuste fino para centralizar exato */
-            font-size: 24px;
-            color: white;
-            cursor: pointer;
-            transition: 0.3s;
-
-            &:hover {
-                color: #838383; /* Altera a cor no hover */
-            }
-        }
-    }
+    background-image: linear-gradient(to right, white, #ebfcff, #a5eaf7);  /* Gradiente da esquerda para a direita */
 }
- 
+
 .cabecalho {
     text-align: center;
     color: #427fb0;
@@ -155,5 +108,32 @@ section {
     text-shadow: -6px 5px 5px rgba(66,127,176,0.6); /*Sombra do texto url: https://html-css-js.com/css/generator/text-shadow/ */
 }
 
+.text {
+    font-size: 50px;
+    color: #427fb0;
+    text-align: center;
+    transform: translateY(0%);
+    padding: 8%;
+    font-weight: bold;
+    a {
+        text-decoration: none;
+        color: #07adb6;
+    }
+    
+    a:hover {
+        color: #07adb68e;
+        transition: 0.3s;
+    }
+}
+
+.final {
+    background-color: #068a91;
+    width: 100%;
+    transform: translateY(20%) translateX(-1%);
+    color: #00f2ff65;
+    text-align: center;
+    padding: 2% 2% 2% 0%; 
+
+}
 
 /* Ajustar para diferentes tamanhos de tela */
