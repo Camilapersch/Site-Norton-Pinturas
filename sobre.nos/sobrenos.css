@@ -30,6 +30,7 @@ header {
 
     /* Alinha o conteúdo de login (ícone e texto) */
     & .login {
+        opacity: 0%; /* esconde  icone de login */
         color: #07adb6;
         cursor: pointer;
         display: flex;
@@ -43,6 +44,7 @@ header {
 
     /* Estilos do ícone dentro de .login */
     & .login i {
+        
         margin-left: 8px; /* Adiciona um pequeno espaço entre o ícone e o texto */
         font-size: 40px; /* Tamanho do ícone */
         cursor: default;
@@ -93,10 +95,6 @@ header {
     }
 }
 
-section {
-
-}
-
 .cabecalho {
     text-align: center;
     color: #427fb0;
@@ -120,8 +118,8 @@ section {
     background-image: linear-gradient(to right, white, #ebfcff, #a5eaf7);  /* Gradiente da esquerda para a direita */
 
         & img {
-        max-width: 600px;
+        max-width: 800px;
         width: 50%;
-        transform: translateY(-110%) translateX(180%);
+        transform: translateY(-95%) translateX(130%);
         }
 }

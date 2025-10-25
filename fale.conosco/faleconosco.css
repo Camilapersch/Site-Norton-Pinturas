@@ -30,6 +30,7 @@ header {
 
     /* Alinha o conteúdo de login (ícone e texto) */
     & .login {
+        opacity: 0%; /* esconde  icone de login */
         color: #07adb6;
         cursor: pointer;
         display: flex;
