@@ -10,7 +10,6 @@ body {
     background-color: rgb(255, 255, 255); /* Cor de fundo */
     color: rgb(255, 255, 255);
     font-size: 16px;
-    overflow: hidden; /* Impede de rolar a imagem */
 }
 
 header {
@@ -30,6 +29,7 @@ header {
 
     /* Alinha o conteúdo de login (ícone e texto) */
     & .login {
+        opacity: 0%; /* esconde  icone de login */
         color: #07adb6;
         cursor: pointer;
         display: flex;
@@ -108,17 +108,18 @@ header {
 .text {
     text-align: center;
     color: #ecf8f8;
-    height: 100%;
+    max-width: 100%;
+    width: 70%;
     font-size: 20px;
     padding: 1% 26% 1% 26%;
     font-weight: bold;
     background-color: #07adb6;
-    text-shadow: -6px 5px 5px rgba(66,127,176,0.6); /*Sombra do texto url: https://html-css-js.com/css/generator/text-shadow/ */
+    transform: translateX(-10%);
 }
 
  .carrossel {
     display: flex;
-    gap: 20px;
+    gap: 200px;
     & .img {
         width: 20%;
         border-radius: 100%;
@@ -128,26 +129,30 @@ header {
         border-radius: 50%; /* formato inicial */
         transition: all 0.5s ease; /* aplica transição em tudo */
         
-        transform: translatey(20%);
-        transform: translateX(20%);
+        transform: translatey(20%) translateX(50%);;
+        
     }
- .img:hover {
+ }
+
+
+.img:hover {
     cursor: pointer;
     border-radius: 10%; /* muda ao passar o mouse */
 }
         
-    }
-    p {
+.titulos {
+        position: relative;
         color: #000000;
         width: 100%;
-        height: 100%;      
- 
+        height: 100%; 
+        transform: translateX(-1000%);     
     }
-        
-        
-        
- }
 
+.img2 {
+    max-width: 600px;
+    width: 50%;
+    height: auto;
+}
  
 
 /* Ajustar para diferentes tamanhos de tela */
